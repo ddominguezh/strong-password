@@ -12,7 +12,10 @@ public class Password {
     }
 
     public boolean isStrong() {
-        return value.length() >= MIN_LENGTH;
+        return isValidLength();
     }
     
+    private boolean isValidLength(){
+        return value.length() >= MIN_LENGTH;
+    }
 }
