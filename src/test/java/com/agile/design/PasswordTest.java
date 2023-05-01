@@ -1,6 +1,7 @@
 package com.agile.design;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -28,5 +29,11 @@ public class PasswordTest {
     public void the_password_is_not_strong_when_not_contains_some_lower_letter(){
         Password password = Password.create("A38D3_");
         assertFalse(password.isStrong());
+    }
+
+    @Test
+    public void the_password_is_strong(){
+        Password password = Password.create("aA34_3d");
+        assertTrue(password.isStrong());
     }
 }
