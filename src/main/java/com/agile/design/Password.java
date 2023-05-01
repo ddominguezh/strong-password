@@ -16,7 +16,8 @@ public class Password {
     public boolean isStrong() {
         return isValidLength()
             && containsSomeNumber()
-            && containsSomeUpperLetter();
+            && containsSomeUpperLetter()
+            && containsSomeLowerLetter();
     }
     
     private boolean isValidLength(){
@@ -29,5 +30,9 @@ public class Password {
 
     private boolean containsSomeUpperLetter(){
         return Pattern.compile("[A-Z]+").matcher(value).find();
+    }
+
+    private boolean containsSomeLowerLetter(){
+        return Pattern.compile("[a-z]+").matcher(value).find();
     }
 }
