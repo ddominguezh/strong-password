@@ -23,6 +23,6 @@ public class Password {
     }
 
     private boolean containsSomeNumber(){
-        return Pattern.compile("[0-9]").matcher(value).matches();
+        return Pattern.compile("[0-9]+").matcher(value).find();
     }
 }
