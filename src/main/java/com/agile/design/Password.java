@@ -29,10 +29,10 @@ public class Password {
     }
 
     private boolean containsSomeUpperLetter(){
-        return Pattern.compile("[A-Z]+").matcher(value).find();
+        return Pattern.compile("[A-ZÑ]+").matcher(value).find();
     }
 
     private boolean containsSomeLowerLetter(){
-        return Pattern.compile("[a-z]+").matcher(value).find();
+        return Pattern.compile("[a-zñ]+").matcher(value).find();
     }
 }
