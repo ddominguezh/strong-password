@@ -36,4 +36,10 @@ public class PasswordTest {
         Password password = Password.create("aA34_3d");
         assertTrue(password.isStrong());
     }
+
+    @Test
+    public void add_support_ñ(){
+        Password password = Password.create("ñÑ34_3ñ");
+        assertTrue(password.isStrong());
+    }
 }
