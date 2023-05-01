@@ -11,4 +11,10 @@ public class PasswordTest {
         Password password = Password.create("aA3_");
         assertFalse(password.isStrong());
     }
+
+    @Test
+    public void the_password_is_not_strong_when_not_contains_some_number(){
+        Password password = Password.create("aA_eDj");
+        assertFalse(password.isStrong());
+    }
 }
