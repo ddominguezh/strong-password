@@ -23,4 +23,10 @@ public class PasswordTest {
         Password password = Password.create("a38d3_");
         assertFalse(password.isStrong());
     }
+
+    @Test
+    public void the_password_is_not_strong_when_not_contains_some_lower_letter(){
+        Password password = Password.create("A38D3_");
+        assertFalse(password.isStrong());
+    }
 }
